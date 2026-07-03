@@ -1,0 +1,24 @@
+# UdaPlay Project .gitignore
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# ChromaDB persistent data
+chromadb_udaplay/
+test_check/
+
+# Environment config (contains API keys)
+config.env
+.env
+
+# Jupyter checkpoint
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Temporary scripts
+run_part1.py
+run_part2.py
