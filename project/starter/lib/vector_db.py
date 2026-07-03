@@ -5,7 +5,6 @@ from chromadb.utils import embedding_functions
 from chromadb.api.models.Collection import Collection as ChromaCollection
 from chromadb.api.types import EmbeddingFunction, QueryResult, GetResult
 
-from lib.loaders import PDFLoader
 from lib.documents import Document, Corpus
 
 
@@ -244,6 +243,7 @@ class CorpusLoaderService:
         store = self.manager.get_or_create_store(store_name)
         print(f"VectorStore `{store_name}` ready!")
 
+        from lib.loaders import PDFLoader
         loader = PDFLoader(pdf_path)
         document = loader.load()
         store.add(document)
